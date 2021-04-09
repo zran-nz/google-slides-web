@@ -32,12 +32,11 @@
           :answerList="answerList"
           :pageId="getPid"
         />
-        <div v-else>Waiting For Responses</div>
       </template>
       <template v-else-if="textList.length>0">
-        <teacherTextItem v-if="textList.length>0" :textList="textList" />
-        <div v-else>Waiting For Responses</div>
+        <teacherTextItem  :textList="textList" />
       </template>
+      <div v-else>Waiting For Responses</div>
     </el-main>
   </el-container>
 </template>
